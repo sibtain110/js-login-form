@@ -1,29 +1,47 @@
-let email = document.getElementById("email")
-let pass = document.getElementById("pass")
-let botton = document.getElementById("btn")
+// let email = document.getElementById("email")
+// let pass = document.getElementById("pass")
+// let botton = document.getElementById("btn")
 
-let x = document.getElementById("email")
-let y = document.getElementById("pass")
-
-
-botton.addEventListener("click",(e)=>{
-    e.preventDefault(   )
-    console.log("email :" ,x.value + " " + "pass",y.value)
-})
+// let x = document.getElementById("email")
+// let y = document.getElementById("pass")
 
 
+// botton.addEventListener("click",(e)=>{
+//     e.preventDefault(   )
+//     console.log("email :" ,x.value + " " + "pass",y.value)
+// })
 
 
 
-//====================--------- Asynchronous javascript
 
-console.log("This is Async");
 
-setTimeout(() => {
-    for (let index = 0; index < 1200; index++) {
-        const element = index;
-        console.log("this is index number" , index);
-    }
-}, 100);
+// //====================--------- Asynchronous javascript
 
-console.log("complete counting");
+// console.log("This is Async");
+
+// setTimeout(() => {
+//     for (let index = 0; index < 1200; index++) {
+//         const element = index;
+//         console.log("this is index number" , index);
+//     }
+// }, 100);
+
+// console.log("complete counting");
+
+
+
+
+// ==============-----------XMLHttpRequest-----===========================
+
+
+function loaded() {
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = function () {
+        document.getElementById("demo").innerHTML = this.responseText;
+    };
+
+    xhttp.open("get","java.txt");
+
+    xhttp.send();
+}
